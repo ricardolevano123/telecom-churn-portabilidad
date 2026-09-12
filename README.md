@@ -66,3 +66,22 @@ Cada error queda registrado en `LOG_ERRORES_CARGA` con la tabla afectada, tipo d
 - Distritos con menor cobertura muestran tasas de churn más altas que el promedio general.
 
 ## 📁 Estructura del repositorio
+
+├── sql/
+│ ├── 01_creacion_tablas.sql # DDL del modelo estrella
+│ ├── 02_carga_datos.sql # ETL con manejo de excepciones
+│ └── 03_consultas_analisis.sql # Las 5 consultas de análisis
+├── imagenes/ # Capturas del dashboard y consultas
+└── README.md
+
+
+## 🚀 Cómo reproducirlo
+
+1. Crear una cuenta de Oracle Cloud (Autonomous Database, free tier).
+2. Ejecutar `sql/01_creacion_tablas.sql` para crear el esquema.
+3. Ejecutar `sql/02_carga_datos.sql` para cargar los datos.
+4. Ejecutar las consultas de `sql/03_consultas_analisis.sql` para replicar el análisis.
+5. Conectar Power BI Desktop a la base Oracle para reconstruir el dashboard.
+
+---
+**Autor:** Ricardo Lévano Párraga
